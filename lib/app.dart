@@ -23,6 +23,7 @@ class _MyAppState extends State<MyApp> {
       title: 'PX',
       initialRoute: Routes.splashScreen,
       onGenerateRoute: RouteGenerator.generateRoute,
+      home: Scaffold(body: Center(child: Text('HOME'),),),
     );
   }
 }
