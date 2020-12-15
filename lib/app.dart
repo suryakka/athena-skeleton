@@ -17,13 +17,15 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      key: Key('AppScreen_materialApp_initialRoute'),
-      debugShowCheckedModeBanner: false,
-      title: 'PX',
-      initialRoute: Routes.splashScreen,
-      onGenerateRoute: RouteGenerator.generateRoute,
-      home: Scaffold(body: Center(child: Text('HOME'),),),
+    return Material(
+          child: MaterialApp(
+        key: Key('AppScreen_materialApp_initialRoute'),
+        debugShowCheckedModeBanner: false,
+        title: 'PX',
+        initialRoute: Routes.furnitureScreen,
+        onGenerateRoute: RouteGenerator.generateRoute,
+        // home: Scaffold(body: Center(child: Text('HOME'),),),
+      ),
     );
   }
 }

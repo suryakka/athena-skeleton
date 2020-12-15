@@ -1,4 +1,5 @@
 import 'package:athena_skeleton/common/routes/routes.dart';
+import 'package:athena_skeleton/template_app/furniture_app.dart';
 import 'package:flutter/material.dart';
 
 class RouteGenerator {
@@ -8,6 +9,10 @@ class RouteGenerator {
         return MaterialPageRoute(
             settings: RouteSettings(name: Routes.splashScreen),
             builder: (_) => _buildSplashScreen());
+      case Routes.furnitureScreen:
+        return MaterialPageRoute(
+            settings: RouteSettings(name: Routes.splashScreen),
+            builder: (_) => _buildFurnitureScreen());
       default:
         return MaterialPageRoute(
             settings: RouteSettings(name: Routes.errorScreen),
@@ -29,5 +34,9 @@ class RouteGenerator {
         child: Text('ERROR SCREEN'),
       ),
     );
+  }
+
+  static Widget _buildFurnitureScreen() {
+    return FurnitureApp();
   }
 }
